@@ -21,11 +21,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
+# 📖 [Vet-clinic: animals table information database system] <a name="about-project"></a>
 
-
-# 📖 [Vet clinic database: animals table information] <a name="></a>
-
-**[ Vet Clinic database is a relational database typed by Structured Query Language 'SQL' using PostgresQL, and it provides the required data to create the data structure for a vet-clinic wep app.]** 
+**[Vet-Clinic]** It is a relational database typed by Structured Query Language 'SQL' using PostgresQL, and it provides the required data to create the data structure for a vet-clinic wep app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
