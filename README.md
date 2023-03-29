@@ -1,4 +1,29 @@
 
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
+
+Modify this file to match your project and remove sections that don't apply.
+
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
+
+After you're finished please remove all the comments and instructions!
+-->
+
+
+<!-- TABLE OF CONTENTS -->
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -21,29 +46,31 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Vet-clinic: animals table information database system] <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-**[Vet-Clinic]** It is a relational database typed by Structured Query Language 'SQL' using PostgresQL, and it provides the required data to create the data structure for a vet-clinic wep app.
+# 📖 [Vet clinic database: animals table information] <a name="></a>
+
+**[ Vet Clinic database is a relational database typed by Structured Query Language 'SQL' using PostgresQL, and it provides the required data to create the data structure for a vet-clinic wep app.]** 
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
+  <!-- <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
 </details>
 
-<details>
+<!-- <details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://expressjs.com/">Express.js</a></li>
   </ul>
-</details>
+</details> --> -->
 
 <details>
 <summary>Database</summary>
@@ -58,9 +85,9 @@
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[create animals table]**
+- **[database performance audit]**
+- **[add database schema diagram]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,7 +97,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- [Live Demo Link](https://github.com/RaphDasilva/vet_clinic_database)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +105,6 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -158,12 +184,18 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
 
 👤 **Kalkidan Daniel**
 
 - GitHub: [@kal2944](https://github.com/kal2944)
 - Twitter: [@Kalkida01088197](https://twitter.com/Kalkida01088197)
 - LinkedIn: [Kalkidan Daniel](https://www.linkedin.com/in/kalkidan-daniel-b2a204238/)
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,9 +205,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[query and update animals table]**
+- [ ] **[query multiple tables]**
+- [ ] **[add "join table" for visits]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,15 +235,14 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank Microverse for this experience
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
+<!-- ## ❓ FAQ <a name="faq"></a>
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
@@ -223,7 +254,7 @@ I would like to thank...
 
   - [Answer_2]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 
