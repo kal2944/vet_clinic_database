@@ -56,3 +56,6 @@ FROM species JOIN animals on species.id = animals.species_id GROUP By species.na
 SELECT full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME",species.name AS "Animal Species"
 FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN species ON  animals.species_id = species.id WHERE owners.id = 2 and species.name = 'Digimon';
 
+SELECT full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME",species.name AS "Animal Species"
+FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN species ON  animals.species_id = species.id WHERE owners.id = 5 and animals.escape_attempts = 0;  
+
