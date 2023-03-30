@@ -49,3 +49,6 @@ FROM animals JOIN species  ON animals.species_id = species.id WHERE species.id =
 
 SELECT  full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME"
 FROM owners LEFT JOIN  animals ON  owners.id =  animals.owner_id ;
+
+SELECT species.name AS "SPECIES NAME",  COUNT(animals.name) AS "SPECIES COUNT" 
+FROM species JOIN animals on species.id = animals.species_id GROUP By species.name;
