@@ -44,3 +44,5 @@ SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1
 SELECT owner_id, full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME"
 FROM animals INNER JOIN owners ON  animals.owner_id = owners.id WHERE owners.full_name = 'Melody Pond';
 
+SELECT species.name AS "Animal Species", animals.name AS "ANIMALS NAME"
+FROM animals JOIN species  ON animals.species_id = species.id WHERE species.id = 1;
