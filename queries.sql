@@ -52,3 +52,7 @@ FROM owners LEFT JOIN  animals ON  owners.id =  animals.owner_id ;
 
 SELECT species.name AS "SPECIES NAME",  COUNT(animals.name) AS "SPECIES COUNT" 
 FROM species JOIN animals on species.id = animals.species_id GROUP By species.name;
+
+SELECT full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME",species.name AS "Animal Species"
+FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN species ON  animals.species_id = species.id WHERE owners.id = 2 and species.name = 'Digimon';
+
