@@ -84,7 +84,7 @@ After you're finished please remove all the comments and instructions!
 
 
 - **[create animals table]**
-- **[database performance audit]**
+- **[query and update animals table]**
 - **[add database schema diagram]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
