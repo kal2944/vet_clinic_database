@@ -33,3 +33,8 @@ VALUES ('Blossom', '1998-10-13', 17, 'true', 3);
 
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
 VALUES ('Ditto', '2022-05-14', 22, 'true', 4);
+
+-- Inserting data for two columns
+
+INSERT INTO owners (full_name, age) 
+VALUES ('Sam Smith',34 ), ('Jennifer Orwel',19 ), ('Bob',45 ), ('Melody Pond', 77),('Dean Winchester', 14), ('Jodie Whittaker', 38);
