@@ -38,3 +38,26 @@ SELECT AVG(weight_kg) FROM animals;
 SELECT neutered, SUM(escape_attempts) FROM animals GROUP BY neutered;
 SELECT species, MIN(weight_kg),MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+--  queries to answer the questions by using join
+
+SELECT owner_id, full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME"
+FROM animals INNER JOIN owners ON  animals.owner_id = owners.id WHERE owners.full_name = 'Melody Pond';
+
+SELECT species.name AS "Animal Species", animals.name AS "ANIMALS NAME"
+FROM animals JOIN species  ON animals.species_id = species.id WHERE species.id = 1;
+
+SELECT  full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME"
+FROM owners LEFT JOIN  animals ON  owners.id =  animals.owner_id ;
+
+SELECT species.name AS "SPECIES NAME",  COUNT(animals.name) AS "SPECIES COUNT" 
+FROM species JOIN animals on species.id = animals.species_id GROUP By species.name;
+
+SELECT full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME",species.name AS "Animal Species"
+FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN species ON  animals.species_id = species.id WHERE owners.id = 2 and species.name = 'Digimon';
+
+SELECT full_name AS "OWNER NAME" , animals.name AS "ANIMALS NAME",species.name AS "Animal Species"
+FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN species ON  animals.species_id = species.id WHERE owners.id = 5 and animals.escape_attempts = 0;  
+
+SELECT full_name AS "OWNER NAME",  COUNT(animals.name) AS "ANIMAL COUNT" 
+FROM owners JOIN animals on owners.id = animals.owner_id GROUP By full_name ORDER BY COUNT(animals.name) DESC LIMIT 1;
