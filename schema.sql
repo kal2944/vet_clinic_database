@@ -13,3 +13,22 @@ PRIMARY KEY(id)
 
 ALTER TABLE animals
 ADD species varchar(255);
+
+
+-- Added new two tables
+
+CREATE TABLE owners (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  full_name VARCHAR(255),
+  age  INT,
+  PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE species (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
