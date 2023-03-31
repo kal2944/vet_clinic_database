@@ -65,4 +65,7 @@ CREATE TABLE specializations (
   CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
 
+ALTER TABLE specializations 
+ADD CONSTRAINT PK_specializations 
+PRIMARY KEY (species_id ,vets_id);
 
