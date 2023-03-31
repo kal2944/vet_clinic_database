@@ -57,3 +57,7 @@ UPDATE animals set owner_id = 4 WHERE name = 'Charmander' or name = 'Squirtle' o
 UPDATE animals set owner_id = 5 WHERE name = 'Angemon' or name = 'Boarmon';
 
 UPDATE owners SET full_name = 'Jennifer Orwell' WHERE id = 2;
+
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-04-23'),('Stephanie Mendez', 64, '1981-05-04'),('Jack Harkness', 38, '2008-08-08');
