@@ -61,3 +61,9 @@ UPDATE owners SET full_name = 'Jennifer Orwell' WHERE id = 2;
 
 INSERT INTO vets (name, age, date_of_graduation)
 VALUES ('William Tatcher', 45, '2000-04-23'),('Stephanie Mendez', 64, '1981-05-04'),('Jack Harkness', 38, '2008-08-08');
+
+INSERT INTO specializations (species_id, vets_id, )
+VALUES ((SELECT id from species WHERE name = 'Pokemon'), (SELECT id from vets WHERE name = 'William Tatcher')),
+((SELECT id from species WHERE name = 'Digimon'), (SELECT id from vets WHERE name = 'Stephanie Mendez')),
+((SELECT id from species WHERE name = 'Pokemon'), (SELECT id from vets WHERE name = 'Stephanie Mendez')),
+((SELECT id from species WHERE name = 'Digimon'), (SELECT id from vets WHERE name = 'Jack Harkness'));
