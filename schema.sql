@@ -69,3 +69,12 @@ ALTER TABLE specializations
 ADD CONSTRAINT PK_specializations 
 PRIMARY KEY (species_id ,vets_id);
 
+CREATE TABLE visits (
+  animal_id INT,
+  vets_id INT,
+  visit_date DATE,
+  CONSTRAINT fk_animal FOREIGN KEY(animal_id)REFERENCES animals(id),
+  CONSTRAINT fk_vets FOREIGN KEY(vets_id)REFERENCES vets(id),
+  CONSTRAINT PK_visits PRIMARY KEY (animal_id ,vets_id)
+);
+
