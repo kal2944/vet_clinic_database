@@ -61,3 +61,36 @@ FROM animals INNER JOIN owners ON  animals.owner_id = owners.id INNER JOIN speci
 
 SELECT full_name AS "OWNER NAME",  COUNT(animals.name) AS "ANIMAL COUNT" 
 FROM owners JOIN animals on owners.id = animals.owner_id GROUP By full_name ORDER BY COUNT(animals.name) DESC LIMIT 1;
+
+SELECT animals.id, animals.name AS Last_Seen, visit_date
+FROM animals JOIN visits ON animals.id = visits.animal_id WHERE vets_id = (SELECT id FROM vets WHERE name = 'William Tatcher' LIMIT 1) ORDER BY visit_date DESC LIMIT 1;
+
+
+SELECT vets.name AS "VET NAME", COUNT(animals.name) AS "animals count"
+FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vets_id = vets.id WHERE vets_id = (SELECT id FROM vets WHERE name = 'Stephanie Mendez' LIMIT 1)GROUP BY vets.name;
+
+ SELECT vets.id, vets.name AS "Vet name", species.name AS "Specialization"
+FROM vets LEFT JOIN specializations ON specializations.vet_id = vets.id LEFT JOIN species on specializations.species_id = species.id;
+
+ SELECT vets.name AS "VET NAME" , animals.name AS "Animal Seen", visit_date
+FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vets_id = vets.id WHERE vets_id IN (SELECT id from vets WHERE name = 'Stephanie Mendez') AND visit_date BETWEEN '2020-04-01' and '2020-08-30';
+
+
+SELECT animals.name , COUNT (*) as "Visit count"
+from animals JOIN visits ON animals.id = visits.animal_id GROUP BY  animals.name ORDER BY COUNT (*) DESC LIMIT 1;
+
+ SELECT animals.name AS "FIRST ANIMAL SEEN", visit_date
+FROM animals JOIN visits ON animals.id = visits.animal_id WHERE vets_id IN (SELECT id from vets WHERE name = 'Maisy Smith') ORDER BY visit_date ASC LIMIT 1;
+
+
+ SELECT animals.name AS "RECENT ANIMAL SEEN", vets.name AS "VET NAME", visit_date AS "Visit Date"
+FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vets_id = vets.id ORDER BY visit_date DESC LIMIT 1;
+
+ SELECT COUNT(*) AS "number of visits" 
+FROM vets INNER JOIN visits ON vets.id = visits.vets_id LEFT JOIN specializations ON vets.id = specializations.vet_id LEFT JOIN species ON specializations.species_id = species.id WHERE species IS NULL;
+
+
+ SELECT species.name AS "Species Name"
+ FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vets_id = vets.id JOIN species ON animals.species_id = species.id WHERE vets.id = 3 GROUP BY species.name ORDER BY count(animals.name) DESC LIMIT 1;
+
+
